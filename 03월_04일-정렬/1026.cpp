@@ -20,19 +20,22 @@ void minS(vector<int> &a, vector<int> &b, int n)
 
     for (int i = 0; i < n; i++) // a 원소를 순서대로 바꿈
     {
-        for (int j = 0; j < n; j++) 
+        for (int j = 0; j < n; j++) // b의 최댓값을 찾은 후 a와 매칭
         {
             if (max_b < tmp2[j])
             {
                 max_b = tmp2[j];
                 max_index = j;
+                
             }
         }
-
+        
+        cout << "max_index : " <<max_index <<"\n";
         a[max_index] = tmp1[i];
-
-        tmp2[max_index] = 0;
-        max_b = 0;
+        
+        // b의 조건이 음수가 아닌 정수이므로 음수를 사용해 해당 원소를 사용했음을 알린다.
+        tmp2[max_index] = -1;
+        max_b = -1;
     }
 
     //합 구하기

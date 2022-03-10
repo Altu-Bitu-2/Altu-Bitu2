@@ -12,6 +12,9 @@ void query(int T, int c, int &total)
     else if (T == 2)
     {
         total = total - c;
+        if ( total < 0){
+            total = 0;
+        }
     }
     else
     {

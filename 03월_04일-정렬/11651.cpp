@@ -11,7 +11,7 @@ struct coor
 
 bool cmp(const coor &a, const coor &b){
     if (a.y == b.y) {
-        return a.x < b.y;
+        return a.x < b.x;
     }
     return a.y < b.y;
 }

@@ -8,12 +8,15 @@ void query(int T, int c, int &total)
     if (T == 1)
     {
         total = total + c;
+        if ( total >= 86400) { //하루가 넘어감
+            total -= 86400;
+        }
     }
     else if (T == 2)
     {
         total = total - c;
-        if ( total < 0){
-            total = 0;
+        if ( total < 0){ //전날로 넘어감
+            total = 86400 + total;
         }
     }
     else

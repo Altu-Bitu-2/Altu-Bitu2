@@ -32,9 +32,6 @@ int main() {
 
     //2. 확장자 정렬한 뒤 개수 세기
     sort(ext.begin(), ext.end());
-    for(int i=0; i < ext.size(); i++) {
-        cout << ext[i] << "\n";
-    }
 
     int cnt = 0;
     string tmp = ext[0];

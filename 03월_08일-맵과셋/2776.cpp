@@ -10,10 +10,10 @@ int main()
 {
     //입력 (1<=N<=1,000,000, 1<=M<=1,000,000)
     int t, n, m, input;
-    unordered_set<int> note;
-
     cin >> t;
+
     while (t--){
+        unordered_set<int> note;
         cin >> n;
         for (int i = 0; i < n; i++)
         {
